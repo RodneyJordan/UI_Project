@@ -1,0 +1,28 @@
+/* button override */
+button, .button {
+   background-color: #2D4571;
+   border-color: #4D648D;
+   color: white;
+}
+
+/* top-bar override */
+button:hover, button:focus, .button:hover, .button:focus {
+    background-color: #4D648D; }
+
+.top-bar {
+   background: #051838;
+}
+
+.top-bar {
+   margin-bottom: 10px;
+}
+
+/* issue template */
+.full-detail {
+   font-size: 14px;
+}
+
+.avatar-thumbnail{
+   width: 60px;
+   height: auto;
+}
