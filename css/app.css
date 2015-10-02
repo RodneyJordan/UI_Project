@@ -6,16 +6,8 @@ button, .button {
 }
 
 /* top-bar override */
-button:hover, button:focus, .button:hover, .button:focus {
+/*button:hover, button:focus, .button:hover, .button:focus {
     background-color: #4D648D; }
-
-.top-bar {
-   background: #051838;
-}
-
-.top-bar {
-   margin-bottom: 10px;
-}
 
 /* issue template */
 .full-detail {
