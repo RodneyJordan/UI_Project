@@ -3,6 +3,7 @@
    <head>
       <title>Open Source Community</title>
       <link rel="stylesheet" href="css2/foundation.css">
+      <link rel="stylesheet" href="css/app.css">
    </head>
    <body>
       <nav class="top-bar" data-topbar role="navigation">
@@ -22,12 +23,7 @@
           </ul>
         </section>
       </nav>
-         <div class="row">
-            <div class="large-12 columns">
-               <br><br><br><br><br><br><br><br>
-            </div>
-         </div>
-         <div class="row">
+         <div id="titlePage"class="row">
         <div class="large-6 columns">
         <div id="slider">
           <img src="img/appleComputer.jpg"/>
@@ -36,17 +32,17 @@
         <hr/>
         </div>
         <div class="large-6 columns">
-           <form>
+           <form id="account" action="" onsubmit="getEmail()" method="get">
                <fieldset>
                   <legend>Create Account</legend>
                      <label>E-Mail
-                     <input type="text" placeholder="E-Mail">
+                     <input name="email" id="email" type="text" placeholder="E-Mail">
                 </label>
                 <label>Password
-                   <input type="password" placeholder="Password">
+                   <input name="password" id="password" type="password" placeholder="Password">
                 </label>
                 <label>
-                   <a href="index.html" class="button expand">Create Account</a>
+                   <input type="submit" class="button expand" value="Create Account">
                 </label>
               </fieldset>
             </form>
@@ -84,5 +80,16 @@
           </div>
         </div> 
       </footer>
+      <script type="text/javascript">
+        var email = document.getElementById("email");
+        var password = document.getElementById("password");
+
+        function getEmail() {
+
+          console.log(email.value);
+        }
+        console.log(email.value);
+        console.log("Hi Jacob, Charmed suxs")
+      </script>
    </body>
 </html>

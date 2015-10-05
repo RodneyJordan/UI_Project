@@ -1,4 +1,4 @@
-/* button override */
+/* button override 
 button, .button {
    background-color: #2D4571;
    border-color: #4D648D;
@@ -7,7 +7,7 @@ button, .button {
 
 /* top-bar override */
 /*button:hover, button:focus, .button:hover, .button:focus {
-    background-color: #4D648D; }
+    background-color: #4D648D; } */
 
 /* issue template */
 .full-detail {
@@ -17,4 +17,12 @@ button, .button {
 .avatar-thumbnail{
    width: 60px;
    height: auto;
+}
+
+.inline-list > li:first-of-type {
+   margin-left: 0px !important;
+}
+
+#titlePage {
+   margin-top: 160px;
 }
