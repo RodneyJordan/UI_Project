@@ -32,7 +32,7 @@
         <hr/>
         </div>
         <div class="large-6 columns">
-           <form id="account" action="" onsubmit="getEmail()" method="get">
+           <form id="account" action="form_action.asp">
                <fieldset>
                   <legend>Create Account</legend>
                      <label>E-Mail
@@ -42,7 +42,7 @@
                    <input name="password" id="password" type="password" placeholder="Password">
                 </label>
                 <label>
-                   <input type="submit" class="button expand" value="Create Account">
+                   <input type="button" class="button expand" onclick="getUserInfo()" value="Create Account">
                 </label>
               </fieldset>
             </form>
@@ -81,15 +81,12 @@
         </div> 
       </footer>
       <script type="text/javascript">
-        var email = document.getElementById("email");
-        var password = document.getElementById("password");
-
-        function getEmail() {
-
-          console.log(email.value);
+        function getUserInfo() {
+          var email = document.getElementById("email").value;
+          var password = document.getElementById("password").value;
+          console.log(email);
+          console.log(password);
         }
-        console.log(email.value);
-        console.log("Hi Jacob, Charmed suxs")
       </script>
    </body>
 </html>
