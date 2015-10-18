@@ -32,7 +32,7 @@
         <hr/>
         </div>
         <div class="large-6 columns">
-           <form id="account" action="form_action.asp">
+           <form id="account" action="database.php" method="post">
                <fieldset>
                   <legend>Create Account</legend>
                      <label>E-Mail
@@ -42,7 +42,7 @@
                    <input name="password" id="password" type="password" placeholder="Password">
                 </label>
                 <label>
-                   <input type="button" class="button expand" onclick="getUserInfo()" value="Create Account">
+                   <input type="submit" class="button expand" value="Create Account">
                 </label>
               </fieldset>
             </form>
@@ -84,8 +84,7 @@
         function getUserInfo() {
           var email = document.getElementById("email").value;
           var password = document.getElementById("password").value;
-          console.log(email);
-          console.log(password);
+          
         }
       </script>
    </body>
