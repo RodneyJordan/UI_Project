@@ -8,8 +8,10 @@ mysqli_select_db($db_server, $db_database)
 if(isset($_POST['email']) && isset($_POST['password'])) {
    $email = $_POST['email'];
    $password = $_POST['password'];
+   $firstname = $_POST['firstname'];
+   $lastname = $_POST['lastname'];
 
-   $query = "INSERT INTO USER(UserName, Password) VALUES('$email', '$password')";
+   $query = "INSERT INTO USER(UserName, Password, Fname, Lname) VALUES('$email', '$password', '$firstname', '$lastname')";
    $result = mysqli_query($db_server, $query);
    if(!$result) die ("Database access failed: " .mysql_error());
    echo "New record created successfully.";

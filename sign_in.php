@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html>
    <head>
@@ -32,7 +35,7 @@
         <div id="slider">
           <img src="img/appleComputer.jpg"/>
         </div>
-        
+
         <hr/>
         </div>
         <div class="large-6 columns">
@@ -40,10 +43,30 @@
                <fieldset>
                   <legend>Sign In</legend>
                      <label>E-Mail
-                     <input name="email" type="text" placeholder="E-Mail">
+                     <?php
+                        if($_SESSION["emptyEmail"] == true) {
+                         echo "<small class=\"error\">Must enter an E-Mail Address</small>";
+                        }
+                        elseif($_SESSION["emptyPassword"] == true) {
+                          echo "<input name=\"email\" type=\"text\" value=\"{$_SESSION["enteredEmail"]}\">";
+                        }
+                        else {
+                          echo "<input name=\"email\" type=\"text\" placeholder=\"E-Mail\">";
+                        }
+                     ?>
                 </label>
                 <label>Password
                    <input name="password" type="password" placeholder="Password">
+                   <?php
+                      if($_SESSION["emptyPassword"] == true) {
+                       echo "<small class=\"error\">Must enter a password.</small>";
+                      }
+                   ?>
+                   <?php
+                      if($_SESSION["invalidEntry"] == true) {
+                       echo "<small class=\"error\">E-Mail or Password is invalid.</small>";
+                      }
+                   ?>
                 </label>
                 <label>
                    <input type="submit" class="button expand" value="Sign In">
@@ -52,13 +75,13 @@
             </form>
         </div>
       </div>
-     
+
     <div class="row">
         <div class="large-12 columns">
-        
+
           <div class="panel">
             <h4>Problems signing in?</h4>
-                
+
             <div class="row">
               <div class="large-9 columns">
                 <p>Contact us anytime.</p>
@@ -68,12 +91,12 @@
               </div>
             </div>
           </div>
-          
+
         </div>
       </div>
-     
-       
-      
+
+
+
       <footer class="row">
         <div class="large-12 columns">
           <hr/>
@@ -82,7 +105,7 @@
               <p>Copyright no one at all.</p>
             </div>
           </div>
-        </div> 
+        </div>
       </footer>
    </body>
 </html>

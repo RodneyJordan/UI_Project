@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Profile - Rodney Jordan</title>
+      <link rel="stylesheet" href="css2/foundation.css">
+      <link rel="stylesheet" href="css/app.css">
+      <script src="js/vendor/modernizr.js"></script>
+   </head>
+   <body>
+      <nav class="top-bar" data-topbar role="navigation">
+        <ul class="title-area">
+          <li class="name">
+            <h1><a href="#">Open Source Community</a></h1>
+          </li>
+           <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+          <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+        </ul>
+
+        <section class="top-bar-section">
+          <!-- Right Nav Section -->
+          <ul class="right">
+            <li class="right"><a href="#"><img src="img/avatar.png" alt="" height="42" width="42"></a></li>
+            <li class="right"><a href="#">Sign Out</a></li>
+          </ul>
+        </section>
+      </nav>
+       <div class="row">
+        <div class="large-12 columns">
+          <div class="panel">
+            <h1>Rodney Jordan</h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="large-12 columns">
+          <div class="icon-bar eight-up">
+            <a class="item" href="issues/golang.html">
+              <label>Go Language</label>
+            </a>
+            <a style="height: 82px;" class="item" href="issues/scala.html">
+              <label>Scala</label>
+            </a>
+            <a style="height: 82px;" class="item" href="issues/foundation.html">
+              <label>Foundation</label>
+            </a>
+            <a style="height: 82px;" class="item" href="issues/rails.html">
+              <label>Ruby on Rails</label>
+            </a>
+            <a style="height: 82px;" class="item" href="issues/dancer.html">
+              <label>Perl Dancer</label>
+            </a>
+            <a style="height: 82px;" class="item" href="issues/angular.html">
+              <label>AngularJS</label>
+            </a>
+            <a style="height: 82px;" class="item" href="issues/pyramid.html">
+              <label>Pyramid</label>
+            </a>
+            <a style="height: 82px;" class="item" href="issues/grails.html">
+              <label>GRails</label>
+            </a>
+          </div>
+        </div>
+      </div>
+       
+      <div class="row">
+      
+         
+        <div class="large-3 columns ">
+          <div class="panel">
+            <a href="#"><img src="img/avatar.png"/></a>
+            <h5><a href="#">Your Name</a></h5>
+              <div class="section-container vertical-nav" data-section data-options="deep_linking: false; one_up: true">
+              <section class="section">
+                <h5 class="title"><a href="#">Section 1</a></h5>
+              </section>
+              <section class="section">
+                <h5 class="title"><a href="#">Section 2</a></h5>
+              </section>
+              <section class="section">
+                <h5 class="title"><a href="#">Section 3</a></h5>
+              </section>
+              <section class="section">
+                <h5 class="title"><a href="#">Section 4</a></h5>
+              </section>
+              <section class="section">
+                <h5 class="title"><a href="#">Section 5</a></h5>
+              </section>
+              <section class="section">
+                <h5 class="title"><a href="#">Section 6</a></h5>
+              </section>
+            </div>
+     
+          </div>
+        </div>
+        
+         
+         
+        <div class="large-6 columns">
+     
+           
+          <div class="row">
+            <div class="large-2 columns small-3"><img src="http://placehold.it/80x80&text=[img]"/></div>
+            <div class="large-10 columns">
+              <p><strong>Some Person said:</strong> Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.</p>
+              <ul class="inline-list">
+                <li><a href="">Reply</a></li>
+                <li><a href="">Share</a></li>
+              </ul>
+     
+     
+              <h6>2 Comments</h6>
+              <div class="row">
+                <div class="large-2 columns small-3"><img src="http://placehold.it/50x50&text=[img]"/></div>
+                <div class="large-10 columns"><p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit</p></div>
+              </div>
+              <div class="row">
+                <div class="large-2 columns small-3"><img src="http://placehold.it/50x50&text=[img]"/></div>
+                <div class="large-10 columns"><p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit</p></div>
+              </div>
+            </div>
+          </div>
+           
+     
+          <hr/>
+     
+           
+          <div class="row">
+            <div class="large-2 columns small-3"><img src="http://placehold.it/80x80&text=[img]"/></div>
+            <div class="large-10 columns">
+              <p><strong>Some Person said:</strong> Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.</p>
+              <ul class="inline-list">
+                <li><a href="">Reply</a></li>
+                <li><a href="">Share</a></li>
+              </ul>
+            </div>
+          </div>
+           
+     
+          <hr/>
+     
+           
+          <div class="row">
+            <div class="large-2 columns small-3"><img src="http://placehold.it/80x80&text=[img]"/></div>
+            <div class="large-10 columns">
+              <p><strong>Some Person said:</strong> Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.</p>
+              <ul class="inline-list">
+                <li><a href="">Reply</a></li>
+                <li><a href="">Share</a></li>
+              </ul>
+     
+     
+              <h6>2 Comments</h6>
+              <div class="row">
+                <div class="large-2 columns small-3"><img src="http://placehold.it/50x50&text=[img]"/></div>
+                <div class="large-10 columns"><p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit</p></div>
+              </div>
+            </div>
+          </div>
+           
+     
+        </div>
+     
+         
+         
+        <aside class="large-3 columns hide-for-small">
+          <p><img src="http://placehold.it/300x440&text=[ad]"/></p>
+          <p><img src="http://placehold.it/300x440&text=[ad]"/></p>
+        </aside>
+     
+      </div>
+     
+     
+       
+     
+      <footer class="row">
+        <div class="large-12 columns">
+          <hr/>
+          <div class="row">
+            <div class="large-5 columns">
+              <p>© Copyright no one at all. Go to town.</p>
+            </div>
+            <div class="large-7 columns">
+              <ul class="inline-list right">
+                <li><a href="#">Section 1</a></li>
+                <li><a href="#">Section 2</a></li>
+                <li><a href="#">Section 3</a></li>
+                <li><a href="#">Section 4</a></li>
+                <li><a href="#">Section 5</a></li>
+                <li><a href="#">Section 6</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+   </body>
+</html>

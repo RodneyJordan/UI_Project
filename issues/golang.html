@@ -108,7 +108,7 @@
           
           <script type="text/template" id="issueTemplate">
           <div class="row issue">
-            <div class="large-2 columns small-3"><img class="th avatar-thumbnail" src="<%= user.avatar_url %>"></div>
+            <div class="large-2 columns small-3"><img class="th avatar-thumbnail" src="<%= user.avatar_url %>" href="<%= user.html_url %>"></div>
             <div class="large-10 columns">
               <ul class="inline-list">
                 <li><strong>Issue: &#35;<%= number %></strong></li>
@@ -126,6 +126,7 @@
                <p class="lead subheader">Issue &#35;<%= number %> | <a href="<%= user.html_url %>">&#64;<%= user.login %></a><%= getLabels(labels) %></p>
                <p class="full-detail"><%= body %></p>
                <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+
             </div>
           <hr/>
           </script>
