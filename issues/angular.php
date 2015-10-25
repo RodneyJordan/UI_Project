@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html>
    <head>
@@ -125,7 +128,18 @@
             <img class="th avatar-thumbnail" src="<%= user.avatar_url %>"> says: <h4 id="modalTitle"><%= title %></h4>
                <p class="lead subheader">Issue &#35;<%= number %> | <a href="<%= user.html_url %>">&#64;<%= user.login %></a><%= getLabels(labels) %></p>
                <p class="full-detail"><%= body %></p>
-               <a href="flag.php" class="button tiny">Flag</a>
+               <form>
+                 <input type="submit" action="flag.php" method="post" class="button tiny" value="Flag">
+                 <input type="hidden" name="Title" value="<%= title %>">
+                 <input type="hidden" name="State" value="<%= state %>">
+                 <input type="hidden" name="URL" value="<%= url %>">
+                 <input type="hidden" name="Labels_URL" value="<%= labels_url %>">
+                 <input type="hidden" name="Comments_URL" value="<%= comments_url %>">
+                 <input type="hidden" name="HTML_URL" value="<%= html_url %>">
+                 <input type="hidden" name="Id" value="<%= number %>">
+                 <input type="hidden" name="Body" value="<%= body %>">
+                 <!--<input type="hidden" name="page" value="angular.php">-->
+               </form>
                <a class="close-reveal-modal" aria-label="Close">&#215;</a>
             </div>
           <hr/>
