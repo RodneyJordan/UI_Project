@@ -15,14 +15,15 @@ CREATE TABLE IF NOT EXISTS USER (
 CREATE TABLE IF NOT EXISTS ISSUES (
    IID int(8) NOT NULL AUTO_INCREMENT,
    UID int(8) NOT NULL,
-   Title varchar(255) NOT NULL,
-   State varchar(5) NOT NULL,
-   URL varchar(255) NOT NULL,
-   Labels_URL varchar(255) NOT NULL,
-   Comments_URL varchar(255) NOT NULL,
-   HTML_URL varchar(255) NOT NULL,
-   Id int(16) NOT NULL,
-   Body text NOT NULL,
-   Avatar_URL varchar(255) NOT NULL,
-   PRIMARY KEY (IID)
+   Title varchar(255),
+   State varchar(5),
+   URL varchar(255),
+   Labels_URL varchar(255),
+   Comments_URL varchar(255),
+   HTML_URL varchar(255),
+   Id int(16),
+   Body TEXT,
+   Avatar_URL varchar(255),
+   PRIMARY KEY (IID),
+   FOREIGN KEY (UID) REFERENCES USER(UID)
 ) ENGINE = MyISAM;

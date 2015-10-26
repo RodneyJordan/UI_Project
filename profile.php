@@ -100,10 +100,7 @@
 
           </div>
         </div>
-
-
-
-        <div class="row issue">
+          <div id="issues" class="large-9 columns">
           <?php
           require_once 'login.php';
 
@@ -112,20 +109,23 @@
           mysqli_select_db($db_server, $db_database)
              or die("Unable to select database: " .mysql_error());
 
-          $query = "SELECT * FROM ISSUES WHERE UID = '{$_SESSION["UID"]}";
+          $query = "SELECT * FROM ISSUES WHERE UID = '{$_SESSION["UID"]}'";
           $result = mysqli_query($db_server, $query);
           if($result) {
             while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+              $body = str_replace("[mysinglequote]", "'", $row['Body']);
+              $body = str_replace("[backtick]", "`", $body);
               ?>
-              <div class="large-2 columns small-3"><img class="th avatar-thumbnail" src="<?php $row['avatar_url']?>"></div>
+              <div class="row issue">
+              <div class="large-2 columns small-3"><img class="th avatar-thumbnail" src="<?= $row['Avatar_URL'] ?>"></div>
               <div class="large-10 columns">
                 <ul class="inline-list">
-                  <li><strong>Issue: &#35;<?php $row['number']?></strong></li>
-                  <li><strong>fucking shit bitch</strong></li>
+                  <li><strong>Issue: &#35;<?php echo $row['Id'];?></strong></li>
+                  <li><strong><?php echo $row['Title']; ?></strong></li>
                 </ul>
-                <a href="<%= user.html_url %>">&#64;<%= user.login %></a>
+                <a href="<?= $row['HTML_URL']?>">Comments on GitHub</a>
                  <%= getLabels(labels.url) %>
-              <p><%= shortenTo140(body) %></p>
+              <p><?= $body ?></p>
               <a href="#" class="button tiny" data-reveal-id="issue-detail-modal-<%= id %>">Full Details</a>
                 </div>
                 </div>
@@ -141,58 +141,8 @@
               <?php
             }
           }
-          else {
-          }
           ?>
-
-
-          <div class="row">
-            <div class="large-2 columns small-3"><img src="http://placehold.it/80x80&text=[img]"/></div>
-            <div class="large-10 columns">
-              <p><strong>Some Person said:</strong> Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.</p>
-              <ul class="inline-list">
-                <li><a href="">Reply</a></li>
-                <li><a href="">Share</a></li>
-              </ul>
-            </div>
           </div>
-
-
-          <hr/>
-
-
-          <div class="row">
-            <div class="large-2 columns small-3"><img src="http://placehold.it/80x80&text=[img]"/></div>
-            <div class="large-10 columns">
-              <p><strong>Some Person said:</strong> Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.</p>
-              <ul class="inline-list">
-                <li><a href="">Reply</a></li>
-                <li><a href="">Share</a></li>
-              </ul>
-
-
-              <h6>2 Comments</h6>
-              <div class="row">
-                <div class="large-2 columns small-3"><img src="http://placehold.it/50x50&text=[img]"/></div>
-                <div class="large-10 columns"><p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit</p></div>
-              </div>
-            </div>
-          </div>
-
-
-        </div>
-
-
-
-        <aside class="large-3 columns hide-for-small">
-          <p><img src="http://placehold.it/300x440&text=[ad]"/></p>
-          <p><img src="http://placehold.it/300x440&text=[ad]"/></p>
-        </aside>
-
-      </div>
-
-
-
 
       <footer class="row">
         <div class="large-12 columns">

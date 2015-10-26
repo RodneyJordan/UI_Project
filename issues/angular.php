@@ -43,7 +43,7 @@
       <div class="row">
         <div class="large-12 columns">
           <div class="icon-bar five-up">
-            <a class="item" href="../profile.html">
+            <a class="item" href="../profile.php">
               <img src="../img/svgs/fi-home.svg" >
               <label>Home</label>
             </a>
@@ -128,8 +128,7 @@
             <img class="th avatar-thumbnail" src="<%= user.avatar_url %>"> says: <h4 id="modalTitle"><%= title %></h4>
                <p class="lead subheader">Issue &#35;<%= number %> | <a href="<%= user.html_url %>">&#64;<%= user.login %></a><%= getLabels(labels) %></p>
                <p class="full-detail"><%= body %></p>
-               <form>
-                 <input type="submit" action="flag.php" method="post" class="button tiny" value="Flag">
+               <form action="flag.php" method="post">
                  <input type="hidden" name="Title" value="<%= title %>">
                  <input type="hidden" name="State" value="<%= state %>">
                  <input type="hidden" name="URL" value="<%= url %>">
@@ -138,7 +137,9 @@
                  <input type="hidden" name="HTML_URL" value="<%= html_url %>">
                  <input type="hidden" name="Id" value="<%= number %>">
                  <input type="hidden" name="Body" value="<%= body %>">
-                 <!--<input type="hidden" name="page" value="angular.php">-->
+                 <input type="hidden" name="Avatar_URL" value="<%= user.avatar_url %>">
+                 <input type="hidden" name="page" value="angular.php">
+                 <input type="submit" class="button tiny" value="Flag">
                </form>
                <a class="close-reveal-modal" aria-label="Close">&#215;</a>
             </div>

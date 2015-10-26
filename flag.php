@@ -1,5 +1,5 @@
 <?php session_start();
-require_once 'login.php';
+require_once '../login.php';
 $db_server = mysqli_connect($db_hostname, $db_username, $db_password);
 if(!$db_server) die("Unable to connect to MySQL: " .mysql_error());
 mysqli_select_db($db_server, $db_database)
@@ -15,15 +15,22 @@ if(isset($_POST['Title'])) {
   $id = $_POST['Id'];
   $body = $_POST['Body'];
   $page = $_POST['page'];
+  $uid = $_SESSION['UID'];
+  $avatar_url = $_POST['Avatar_URL'];
+  $title = str_replace("'", "[mysinglequote]", $title);
+  $title = str_replace("`", "[backtick]", $title);
+  $body = str_replace("'", "[mysinglequote]", $body);
+  $body = str_replace("`", "[backtick]", $body);
 
-  $query = "INSERT INTO ISSUES(Title, State, URL, Labels_URL, Comments_URL, HTML_URL, Id, Body)
-    VALUES('$title', '$state', '$url', '$label_url', '$comments_url', '$html_url', '$id', '$body')";
+  $query = "INSERT INTO ISSUES(UID, Title, State, URL, Labels_URL, Comments_URL, HTML_URL, Id, Body, Avatar_URL)
+    VALUES('$uid', '$title', '$state', '$url', '$label_url', '$comments_url', '$html_url', '$id', '$body', '$avatar_url')";
   $result = mysqli_query($db_server, $query);
-  if(!$result) die ("Database access failed: " .mysql_error());
+  if(!$result) die ("Database access failed: " .mysqli_error($db_server));
   else {
-    $_SESSION["flagSet"] = true;
+    //$_SESSION["flagSet"] = true;
     header("Location: " .$page);
     exit();
+    //echo "seems to have worked...";
   }
 }
 ?>
