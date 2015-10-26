@@ -42,28 +42,28 @@
       <div class="row">
         <div class="large-12 columns">
           <div class="icon-bar eight-up">
-            <a class="item" href="issues/golang.html">
+            <a class="item" href="issues/golang.php">
               <label>Go Language</label>
             </a>
-            <a style="height: 82px;" class="item" href="issues/scala.html">
+            <a style="height: 82px;" class="item" href="issues/scala.php">
               <label>Scala</label>
             </a>
-            <a style="height: 82px;" class="item" href="issues/foundation.html">
+            <a style="height: 82px;" class="item" href="issues/foundation.php">
               <label>Foundation</label>
             </a>
-            <a style="height: 82px;" class="item" href="issues/rails.html">
+            <a style="height: 82px;" class="item" href="issues/rails.php">
               <label>Ruby on Rails</label>
             </a>
-            <a style="height: 82px;" class="item" href="issues/dancer.html">
+            <a style="height: 82px;" class="item" href="issues/dancer.php">
               <label>Perl Dancer</label>
             </a>
             <a style="height: 82px;" class="item" href="issues/angular.php">
               <label>AngularJS</label>
             </a>
-            <a style="height: 82px;" class="item" href="issues/pyramid.html">
+            <a style="height: 82px;" class="item" href="issues/pyramid.php">
               <label>Pyramid</label>
             </a>
-            <a style="height: 82px;" class="item" href="issues/grails.html">
+            <a style="height: 82px;" class="item" href="issues/grails.php">
               <label>GRails</label>
             </a>
           </div>
@@ -76,7 +76,9 @@
         <div class="large-3 columns ">
           <div class="panel">
             <a href="#"><img src="img/avatar.png"/></a>
-            <h5><a href="#">Your Name</a></h5>
+            <?php
+              echo "<h5><a href=\"#\">{$_SESSION['Fname']} {$_SESSION['Lname']}</a></h5>";
+            ?>
               <div class="section-container vertical-nav" data-section data-options="deep_linking: false; one_up: true">
               <section class="section">
                 <h5 class="title"><a href="#">Section 1</a></h5>
