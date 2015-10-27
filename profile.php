@@ -25,7 +25,7 @@
           <!-- Right Nav Section -->
           <ul class="right">
             <li class="right"><a href="#"><img src="img/avatar.png" alt="" height="42" width="42"></a></li>
-            <li class="right"><a href="#">Sign Out</a></li>
+            <li class="right"><a href="signout.php">Sign Out</a></li>
           </ul>
         </section>
       </nav>
@@ -126,11 +126,14 @@
                   <li><strong><?php echo $row['Title']; ?></strong></li>
                 </ul>
                 <a href="<?= $row['HTML_URL']?>">Comments on GitHub</a>
-                 <%= getLabels(labels.url) %>
-              <p><?= $body ?></p>
-              <a href="#" class="button tiny" data-reveal-id="issue-detail-modal-<%= id %>">Full Details</a>
+                  <p><?= $body ?></p>
+                  <form action="remove.php" method="post">
+                    <a href="#" class="button tiny" data-reveal-id="issue-detail-modal-<%= id %>">Full Details</a>
+                    <input type="hidden" name="IID" value="<?= $row['IID']?>">
+                    <input type="submit" class="button tiny" value="Remove Issue">
+                  </form>
                 </div>
-                </div>
+              </div>
                 <div id="issue-detail-modal-<%= id %>" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
 
               <img class="th avatar-thumbnail" src="<%= user.avatar_url %>"> says: <h4 id="modalTitle"><%= title %></h4>

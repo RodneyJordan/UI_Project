@@ -45,6 +45,7 @@
                      <label>E-Mail
                      <?php
                         if($_SESSION["emptyEmail"] == true) {
+                         echo "<input name=\"email\" type=\"text\" placeholder=\"E-Mail\">";
                          echo "<small class=\"error\">Must enter an E-Mail Address</small>";
                         }
                         elseif($_SESSION["emptyPassword"] == true) {
