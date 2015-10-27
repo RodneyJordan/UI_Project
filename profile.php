@@ -1,5 +1,15 @@
 <?php
   session_start();
+  function shortenTo140($bodyToShorten) {
+    $i = 140;
+    $body = $bodyToShorten;
+    do{
+        $body = substr($bodyToShorten, 0, $i);
+        $i--;
+    }while($i > 0 && $body{$i} != " ");
+
+    return $body;
+  }
 ?>
 <!DOCTYPE html>
 <html>
@@ -12,6 +22,10 @@
       <script src="js/vendor/modernizr.js"></script>
    </head>
    <body>
+
+      <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+      <script src="js/foundation/foundation.js"></script>
+      <script src="js/foundation/foundation.reveal.js"></script>
       <nav class="top-bar" data-topbar role="navigation">
         <ul class="title-area">
           <li class="name">
@@ -103,6 +117,10 @@
           </div>
         </div>
           <div id="issues" class="large-9 columns">
+          <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+          <script src="js/foundation/foundation.js"></script>
+          <script src="js/foundation/foundation.reveal.js"></script>
+
           <?php
           require_once 'login.php';
 
@@ -125,8 +143,11 @@
                   <li><strong>Issue: &#35;<?php echo $row['Id'];?></strong></li>
                   <li><strong><?php echo $row['Title']; ?></strong></li>
                 </ul>
-                <a href="<?= $row['HTML_URL']?>">Comments on GitHub</a>
-                  <p><?= $body ?></p>
+                <ul class="inline-list">
+                  <li><strong><a href="<?= $row['HTML_URL']?>">Comments on GitHub</a></strong></li>
+                  <li><strong>Issue State: <?php echo $row['State'];?></strong></li>
+                </ul>
+                  <p><?= shortenTo140($body); ?></p>
                   <form action="remove.php" method="post">
                     <a href="#" class="button tiny" data-reveal-id="issue-detail-modal-<%= id %>">Full Details</a>
                     <input type="hidden" name="IID" value="<?= $row['IID']?>">
@@ -134,12 +155,11 @@
                   </form>
                 </div>
               </div>
-                <div id="issue-detail-modal-<%= id %>" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+                <div id="issue-detail-modal-<?= $row['IID']?>" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
 
-              <img class="th avatar-thumbnail" src="<%= user.avatar_url %>"> says: <h4 id="modalTitle"><%= title %></h4>
-                 <p class="lead subheader">Issue &#35;<%= number %> | <a href="<%= user.html_url %>">&#64;<%= user.login %></a><%= getLabels(labels) %></p>
-                 <p class="full-detail"><%= body %></p>
-                 <a href="flag.php" class="button tiny">Flag</a>
+              <img class="th avatar-thumbnail" src="<?= $row['Avatar_URL'] ?>"> says: <h4 id="modalTitle"><?= $row['Title']?></h4>
+                 <p class="lead subheader">Issue &#35;<?= $row['Id']?> | <a href="<?= $row['HTML_URL']?>">&#64;<%= user.login %></a><%= getLabels(labels) %></p>
+                 <p class="full-detail"><?= $body ?></p>
                  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
               </div>
               <hr/>
