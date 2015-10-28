@@ -22,10 +22,6 @@
       <script src="js/vendor/modernizr.js"></script>
    </head>
    <body>
-
-      <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-      <script src="js/foundation/foundation.js"></script>
-      <script src="js/foundation/foundation.reveal.js"></script>
       <nav class="top-bar" data-topbar role="navigation">
         <ul class="title-area">
           <li class="name">
@@ -149,7 +145,7 @@
                 </ul>
                   <p><?= shortenTo140($body); ?></p>
                   <form action="remove.php" method="post">
-                    <a href="#" class="button tiny" data-reveal-id="issue-detail-modal-<%= id %>">Full Details</a>
+                    <a href="#" class="button tiny" data-reveal-id="issue-detail-modal-<?= $row['IID']?>">Full Details</a>
                     <input type="hidden" name="IID" value="<?= $row['IID']?>">
                     <input type="submit" class="button tiny" value="Remove Issue">
                   </form>
@@ -190,4 +186,7 @@
         </div>
       </footer>
    </body>
+   <script>
+    $(document).foundation();
+  </script>
 </html>
