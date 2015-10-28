@@ -42,6 +42,7 @@ if(isset($_POST['email']) && isset($_POST['password'])) {
      $_SESSION["Fname"] = $row["Fname"];
      $_SESSION["Lname"] = $row["Lname"];
      $_SESSION["UID"] = $row["UID"];
+     $_SESSION['Avatar'] = $row["Avatar"];
      header("Location: profile.php"); /* Redirect browser */
      exit();
    }

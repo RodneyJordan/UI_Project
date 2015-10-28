@@ -10,10 +10,12 @@ if(isset($_POST['email']) && isset($_POST['password'])) {
    $password = $_POST['password'];
    $firstname = $_POST['firstname'];
    $lastname = $_POST['lastname'];
+   $avatar = "img/default-user.jpg";
+   echo $avatar;
 
-   $query = "INSERT INTO USER(UserName, Password, Fname, Lname) VALUES('$email', '$password', '$firstname', '$lastname')";
+   $query = "INSERT INTO USER(UserName, Password, Fname, Lname, Avatar) VALUES('$email', '$password', '$firstname', '$lastname', '$avatar')";
    $result = mysqli_query($db_server, $query);
-   if(!$result) die ("Database access failed: " .mysql_error());
+   if(!$result) die ("Database access failed: " .mysqli_error($db_server));
    echo "New record created successfully.";
 }
 

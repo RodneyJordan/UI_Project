@@ -42,7 +42,7 @@
       </div>
       <div class="row">
         <div class="large-12 columns">
-          <div class="icon-bar five-up">
+          <div class="icon-bar four-up">
             <a class="item" href="../profile.php">
               <img src="../img/svgs/fi-home.svg" >
               <label>Home</label>
@@ -55,10 +55,7 @@
               <img src="../img/svgs/fi-social-github.svg" >
               <label>Git Repo</label>
             </a>
-            <a class="item">
-              <img src="../img/svgs/fi-share.svg" >
-              <label>Share</label>
-            </a>
+
             <a class="item" href="https://angularjs.org">
               <img src="../img/svgs/fi-link.svg" >
               <label>Angular Homepage</label>
@@ -72,28 +69,9 @@
 
         <div class="large-3 columns ">
           <div class="panel">
-            <a href="#"><img src="http://placehold.it/300x240&text=[img]"/></a>
-            <h5><a href="#">Your Name</a></h5>
-              <div class="section-container vertical-nav" data-section data-options="deep_linking: false; one_up: true">
-              <section class="section">
-                <h5 class="title"><a href="#">Section 1</a></h5>
-              </section>
-              <section class="section">
-                <h5 class="title"><a href="#">Section 2</a></h5>
-              </section>
-              <section class="section">
-                <h5 class="title"><a href="#">Section 3</a></h5>
-              </section>
-              <section class="section">
-                <h5 class="title"><a href="#">Section 4</a></h5>
-              </section>
-              <section class="section">
-                <h5 class="title"><a href="#">Section 5</a></h5>
-              </section>
-              <section class="section">
-                <h5 class="title"><a href="#">Section 6</a></h5>
-              </section>
-            </div>
+            <a href="#"><img src="../img/avatar.png"/></a>
+            <h5><a href="#"><?= $_SESSION['Fname']?> <?= $_SESSION['Lname']?></a></h5>
+
 
           </div>
         </div>

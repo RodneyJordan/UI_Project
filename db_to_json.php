@@ -1,3 +1,5 @@
+// Code that is not in use.
+
 <?php session_start();
 require_once 'login.php';
 $db_server = mysqli_connect($db_hostname, $db_username, $db_password);
@@ -28,3 +30,28 @@ if(isset($_SESSION['UID'])) {
   $current .= "</html>\n";
 }
 ?>
+<a class="item">
+  <img src="../img/svgs/fi-share.svg" >
+  <label>Share</label>
+</a>
+
+<div class="section-container vertical-nav" data-section data-options="deep_linking: false; one_up: true">
+<section class="section">
+  <h5 class="title"><a href="#">Section 1</a></h5>
+</section>
+<section class="section">
+  <h5 class="title"><a href="#">Section 2</a></h5>
+</section>
+<section class="section">
+  <h5 class="title"><a href="#">Section 3</a></h5>
+</section>
+<section class="section">
+  <h5 class="title"><a href="#">Section 4</a></h5>
+</section>
+<section class="section">
+  <h5 class="title"><a href="#">Section 5</a></h5>
+</section>
+<section class="section">
+  <h5 class="title"><a href="#">Section 6</a></h5>
+</section>
+</div>
