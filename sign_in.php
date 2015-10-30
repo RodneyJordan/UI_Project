@@ -33,7 +33,7 @@
          <div class="row">
         <div class="large-6 columns">
         <div id="slider">
-          <img src="img/appleComputer.jpg"/>
+          <img src="img/appleComputer.png"/>
         </div>
 
         <hr/>

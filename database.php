@@ -10,7 +10,7 @@ if(isset($_POST['email']) && isset($_POST['password'])) {
    $password = $_POST['password'];
    $firstname = $_POST['firstname'];
    $lastname = $_POST['lastname'];
-   $avatar = "img/default-user.jpg";
+   $avatar = "img/default-user.png";
    echo $avatar;
 
    $query = "INSERT INTO USER(UserName, Password, Fname, Lname, Avatar) VALUES('$email', '$password', '$firstname', '$lastname', '$avatar')";

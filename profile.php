@@ -34,7 +34,9 @@
         <section class="top-bar-section">
           <!-- Right Nav Section -->
           <ul class="right">
-            <li class="right"><a href="#"><img src="<?= $_SESSION['Avater'] ?>" alt="" height="42" width="42"></a></li>
+            <?php
+            echo "<li class=\"right\"><a href=\"#\"><img src=\"{$_SESSION['Avatar']}\" alt=\"\" height=\"42\" width=\"42\"></a></li>";
+            ?>
             <li class="right"><a href="signout.php">Sign Out</a></li>
           </ul>
         </section>
@@ -85,8 +87,8 @@
 
         <div class="large-3 columns ">
           <div class="panel">
-            <a href="#"><img src="<?= $_SESSION['Avatar'] ?>"/></a>
             <?php
+              echo "<a href=\"#\"><img src=\"{$_SESSION['Avatar']}\"/></a>";
               echo "<h5><a href=\"#\">{$_SESSION['Fname']} {$_SESSION['Lname']}</a></h5>";
             ?>
               <div class="section-container vertical-nav" data-section data-options="deep_linking: false; one_up: true">
