@@ -16,7 +16,7 @@ if(isset($_POST['email']) && isset($_POST['password'])) {
    $query = "INSERT INTO USER(UserName, Password, Fname, Lname, Avatar) VALUES('$email', '$password', '$firstname', '$lastname', '$avatar')";
    $result = mysqli_query($db_server, $query);
    if(!$result) die ("Database access failed: " .mysqli_error($db_server));
-   echo "New record created successfully.";
+   header("Location: profile.php");
 }
 
 ?>

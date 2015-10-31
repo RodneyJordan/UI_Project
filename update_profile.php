@@ -85,14 +85,14 @@
 
 
         <div class="large-9 columns">
-          <form id="account" action="database.php" method="post">
+          <form id="account" action="updateprofile.php" method="post">
               <fieldset>
                  <legend>Update Account</legend>
                  <label>First Name
-                   <input name="firstname" type="text" placeholder="<?= $_SESSION['Fname']?>">
+                   <input name="fname" type="text" placeholder="<?= $_SESSION['Fname']?>">
                </label>
                <label>Last Name
-                   <input name="lastname" type="text" placeholder="<?= $_SESSION['Lname']?>">
+                   <input name="lname" type="text" placeholder="<?= $_SESSION['Lname']?>">
                </label>
                     <label>E-Mail
                     <input name="email" id="email" type="text" placeholder="<?= $_SESSION['Email']?>">
@@ -101,7 +101,7 @@
                   <input name="password" id="password" type="password" placeholder="Password">
                </label>
                <label>
-                  <input type="submit" class="button expand" value="Create Account">
+                  <input type="submit" class="button expand" value="Update Profile">
                </label>
              </fieldset>
            </form>
