@@ -3,8 +3,10 @@
 <!DOCTYPE html>
 <html>
    <head>
-      <title>Profile - Rodney Jordan</title>
-      <link rel="stylesheet" href="css2/foundation.css">
+     <?php
+      echo "<title>Profile - {$_SESSION["Fname"]} {$_SESSION["Lname"]}</title>";
+     ?>
+     <link rel="stylesheet" href="css2/foundation.css">
       <link rel="stylesheet" href="css/app.css">
       <script src="js/vendor/modernizr.js"></script>
    </head>
@@ -21,7 +23,9 @@
         <section class="top-bar-section">
           <!-- Right Nav Section -->
           <ul class="right">
-            <li class="right"><a href="#"><img src="img/avatar.png" alt="" height="42" width="42"></a></li>
+            <?php
+            echo "<li class=\"right\"><a href=\"#\"><img src=\"{$_SESSION['Avatar']}\" alt=\"\" height=\"42\" width=\"42\"></a></li>";
+            ?>
             <li class="right"><a href="signout.php">Sign Out</a></li>
           </ul>
         </section>
@@ -70,110 +74,40 @@
 
         <div class="large-3 columns ">
           <div class="panel">
-            <a href="#"><img src="<?= $_SESSION['Avatar'] ?>"/></a>
-            <h5><a href="#"><?= $_SESSION['Fname']?> <?= $_SESSION['Lname']?></a></h5>
-              <div class="section-container vertical-nav" data-section data-options="deep_linking: false; one_up: true">
-              <section class="section">
-                <h5 class="title"><a href="#">Section 1</a></h5>
-              </section>
-              <section class="section">
-                <h5 class="title"><a href="#">Section 2</a></h5>
-              </section>
-              <section class="section">
-                <h5 class="title"><a href="#">Section 3</a></h5>
-              </section>
-              <section class="section">
-                <h5 class="title"><a href="#">Section 4</a></h5>
-              </section>
-              <section class="section">
-                <h5 class="title"><a href="#">Section 5</a></h5>
-              </section>
-              <section class="section">
-                <h5 class="title"><a href="#">Section 6</a></h5>
-              </section>
-            </div>
+            <?php
+              echo "<a href=\"#\"><img src=\"{$_SESSION['Avatar']}\"/></a>"
+            ?>
+            <h5><a href="profile.php"><?= $_SESSION['Fname']?> <?= $_SESSION['Lname']?></a></h5>
 
           </div>
         </div>
 
 
 
-        <div class="large-6 columns">
-
-
-          <div class="row">
-            <div class="large-2 columns small-3"><img src="http://placehold.it/80x80&text=[img]"/></div>
-            <div class="large-10 columns">
-              <p><strong>Some Person said:</strong> Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.</p>
-              <ul class="inline-list">
-                <li><a href="">Reply</a></li>
-                <li><a href="">Share</a></li>
-              </ul>
-
-
-              <h6>2 Comments</h6>
-              <div class="row">
-                <div class="large-2 columns small-3"><img src="http://placehold.it/50x50&text=[img]"/></div>
-                <div class="large-10 columns"><p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit</p></div>
-              </div>
-              <div class="row">
-                <div class="large-2 columns small-3"><img src="http://placehold.it/50x50&text=[img]"/></div>
-                <div class="large-10 columns"><p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit</p></div>
-              </div>
-            </div>
-          </div>
-
-
-          <hr/>
-
-
-          <div class="row">
-            <div class="large-2 columns small-3"><img src="http://placehold.it/80x80&text=[img]"/></div>
-            <div class="large-10 columns">
-              <p><strong>Some Person said:</strong> Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.</p>
-              <ul class="inline-list">
-                <li><a href="">Reply</a></li>
-                <li><a href="">Share</a></li>
-              </ul>
-            </div>
-          </div>
-
-
-          <hr/>
-
-
-          <div class="row">
-            <div class="large-2 columns small-3"><img src="http://placehold.it/80x80&text=[img]"/></div>
-            <div class="large-10 columns">
-              <p><strong>Some Person said:</strong> Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.</p>
-              <ul class="inline-list">
-                <li><a href="">Reply</a></li>
-                <li><a href="">Share</a></li>
-              </ul>
-
-
-              <h6>2 Comments</h6>
-              <div class="row">
-                <div class="large-2 columns small-3"><img src="http://placehold.it/50x50&text=[img]"/></div>
-                <div class="large-10 columns"><p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit</p></div>
-              </div>
-            </div>
-          </div>
-
-
+        <div class="large-9 columns">
+          <form id="account" action="database.php" method="post">
+              <fieldset>
+                 <legend>Update Account</legend>
+                 <label>First Name
+                   <input name="firstname" type="text" placeholder="<?= $_SESSION['Fname']?>">
+               </label>
+               <label>Last Name
+                   <input name="lastname" type="text" placeholder="<?= $_SESSION['Lname']?>">
+               </label>
+                    <label>E-Mail
+                    <input name="email" id="email" type="text" placeholder="<?= $_SESSION['Email']?>">
+               </label>
+               <label>Password
+                  <input name="password" id="password" type="password" placeholder="Password">
+               </label>
+               <label>
+                  <input type="submit" class="button expand" value="Create Account">
+               </label>
+             </fieldset>
+           </form>
         </div>
-
-
-
-        <aside class="large-3 columns hide-for-small">
-          <p><img src="http://placehold.it/300x440&text=[ad]"/></p>
-          <p><img src="http://placehold.it/300x440&text=[ad]"/></p>
-        </aside>
 
       </div>
-
-
-
 
       <footer class="row">
         <div class="large-12 columns">
