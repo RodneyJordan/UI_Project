@@ -100,7 +100,7 @@
                 <li><strong><%= title %></strong></li>
               </ul>
               <a href="<%= user.html_url %>">&#64;<%= user.login %></a>
-               <%= getLabels(labels.url) %>
+               <%= getLabels(labels) %>
             <p><%= shortenTo140(body) %></p>
             <a href="#" class="button tiny" data-reveal-id="issue-detail-modal-<%= id %>">Full Details</a>
               </div>
@@ -202,15 +202,18 @@
          }
 
          function getLabels(labels){
-            var html;
-            // parse labels obj = JSON.parse(labels)
-            console.log(JSON.stringify(labels));
-            if(JSON.stringify(labels) != "[]"){
-               //html = "&nbsp;|&nbsp;<span class=\"info label\"> " + JSON.stringify(labels) + " </span>";
-               html = "&nbsp;|&nbsp;<span class=\"info label\"> " + "<a href=\"<%= url %>\" aria-label=\"View all activerecord issues\" class=\"label\" style=\"color: #<% labels.color%>;\"> labels.name</a>" + "</span>";
-               return html;
+            var html = "";
+            for(i = 0; i < labels.length; i++) {
+              //html = "&nbsp;|&nbsp;<span class=\"info label\"> " + html.concat(labels[i].name);
+              html = html.concat("&nbsp;|&nbsp;<span class=\"info label\" style=\"background-color:#");
+              html = html.concat(labels[i].color);
+              html = html.concat("\">");
+              html = html.concat(labels[i].name);
+              html = html.concat(" </span>");
             }
+               return html;
          }
+         $(document).foundation();
       </script>
       <!-- END BACKBONE code -->
    </body>
