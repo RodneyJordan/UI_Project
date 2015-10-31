@@ -29,9 +29,9 @@
           <!-- Right Nav Section -->
           <ul class="right">
             <?php
-            echo "<li class=\"right\"><a href=\"#\"><img src=\"../{$_SESSION['Avatar']}\" alt=\"\" height=\"42\" width=\"42\"></a></li>";
+            echo "<li class=\"right\"><a href=\"../profile.php\"><img src=\"../{$_SESSION['Avatar']}\" alt=\"\" height=\"42\" width=\"42\"></a></li>";
             ?>
-            <li class="right"><a href="#">Sign Out</a></li>
+            <li class="right"><a href="../signout.php">Sign Out</a></li>
           </ul>
         </section>
       </nav>
@@ -44,7 +44,7 @@
       </div>
       <div class="row">
         <div class="large-12 columns">
-          <div class="icon-bar five-up">
+          <div class="icon-bar four-up">
             <a class="item" href="../profile.php">
               <img src="../img/svgs/fi-home.svg" >
               <label>Home</label>
@@ -56,10 +56,6 @@
             <a class="item" href="https://github.com/zurb/foundation">
               <img src="../img/svgs/fi-social-github.svg" >
               <label>Git Repo</label>
-            </a>
-            <a class="item">
-              <img src="../img/svgs/fi-share.svg" >
-              <label>Share</label>
             </a>
             <a class="item" href="http://foundation.zurb.com">
               <img src="../img/svgs/fi-link.svg" >
@@ -75,9 +71,9 @@
         <div class="large-3 columns ">
           <div class="panel">
             <?php
-              echo "<a href=\"#\"><img src=\"../{$_SESSION['Avatar']}\"/></a>"
+              echo "<a href=\"../profile.php\"><img src=\"../{$_SESSION['Avatar']}\"/></a>"
             ?>
-            <h5><a href="#"><?= $_SESSION['Fname']?> <?= $_SESSION['Lname']?></a></h5>
+            <h5><a href="../profile.php"><?= $_SESSION['Fname']?> <?= $_SESSION['Lname']?></a></h5>
 
           </div>
         </div>
@@ -102,7 +98,7 @@
                 <li><strong><%= title %></strong></li>
               </ul>
               <a href="<%= user.html_url %>">&#64;<%= user.login %></a>
-               <%= getLabels(labels.url) %>
+               <%= getLabels(labels) %>
             <p><%= shortenTo140(body) %></p>
             <a href="#" class="button tiny" data-reveal-id="issue-detail-modal-<%= id %>">Full Details</a>
               </div>
@@ -204,14 +200,16 @@
          }
 
          function getLabels(labels){
-            var html;
-            // parse labels obj = JSON.parse(labels)
-            console.log(JSON.stringify(labels));
-            if(JSON.stringify(labels) != "[]"){
-               //html = "&nbsp;|&nbsp;<span class=\"info label\"> " + JSON.stringify(labels) + " </span>";
-               html = "&nbsp;|&nbsp;<span class=\"info label\"> " + "<a href=\"<%= url %>\" aria-label=\"View all activerecord issues\" class=\"label\" style=\"color: #<% labels.color%>;\"> labels.name</a>" + "</span>";
-               return html;
+            var html = "";
+            for(i = 0; i < labels.length; i++) {
+              //html = "&nbsp;|&nbsp;<span class=\"info label\"> " + html.concat(labels[i].name);
+              html = html.concat("&nbsp;|&nbsp;<span class=\"info label\" style=\"background-color:#");
+              html = html.concat(labels[i].color);
+              html = html.concat("\">");
+              html = html.concat(labels[i].name);
+              html = html.concat(" </span>");
             }
+               return html;
          }
       </script>
       <!-- END BACKBONE code -->

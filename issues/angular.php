@@ -31,7 +31,7 @@
             <?php
             echo "<li class=\"right\"><a href=\"#\"><img src=\"../{$_SESSION['Avatar']}\" alt=\"\" height=\"42\" width=\"42\"></a></li>";
             ?>
-            <li class="right"><a href="#">Sign Out</a></li>
+            <li class="right"><a href="../signout.php">Sign Out</a></li>
           </ul>
         </section>
       </nav>
@@ -72,9 +72,9 @@
         <div class="large-3 columns ">
           <div class="panel">
             <?php
-              echo "<a href=\"#\"><img src=\"../{$_SESSION['Avatar']}\"/></a>"
+              echo "<a href=\"../profile.php\"><img src=\"../{$_SESSION['Avatar']}\"/></a>"
             ?>
-            <h5><a href="#"><?= $_SESSION['Fname']?> <?= $_SESSION['Lname']?></a></h5>
+            <h5><a href="../profile.php"><?= $_SESSION['Fname']?> <?= $_SESSION['Lname']?></a></h5>
 
 
           </div>
