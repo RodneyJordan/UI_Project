@@ -29,7 +29,7 @@
           <!-- Right Nav Section -->
           <ul class="right">
             <?php
-            echo "<li class=\"right\"><a href=\"../profile.php\"><img src=\"../{$_SESSION['Avatar']}\" alt=\"\" height=\"42\" width=\"42\"></a></li>";
+            echo "<li class=\"right\"><a href=\"#\"><img style=\"height:42px; width:42px;\"src=\"{$_SESSION['Avatar']}\"></a></li>";
             ?>
             <li class="right"><a href="../signout.php">Sign Out</a></li>
           </ul>
@@ -110,6 +110,8 @@
                <form action="flag.php" method="post">
                  <input type="hidden" name="Title" value="<%= title %>">
                  <input type="hidden" name="State" value="<%= state %>">
+                 <input type="hidden" name="User" value="<%= user.login %>">
+                 <input type="hidden" name="User_HTML" value="<%= user.html_url %>">
                  <input type="hidden" name="URL" value="<%= url %>">
                  <input type="hidden" name="Labels_URL" value="<%= labels_url %>">
                  <input type="hidden" name="Comments_URL" value="<%= comments_url %>">
@@ -135,17 +137,7 @@
           <hr/>
           <div class="row">
             <div class="large-5 columns">
-              <p>© Copyright no one at all. Go to town.</p>
-            </div>
-            <div class="large-7 columns">
-              <ul class="inline-list right">
-                <li><a href="#">Section 1</a></li>
-                <li><a href="#">Section 2</a></li>
-                <li><a href="#">Section 3</a></li>
-                <li><a href="#">Section 4</a></li>
-                <li><a href="#">Section 5</a></li>
-                <li><a href="#">Section 6</a></li>
-              </ul>
+              <p>Copyright no one at all.</p>
             </div>
           </div>
         </div>

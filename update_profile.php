@@ -24,7 +24,7 @@
           <!-- Right Nav Section -->
           <ul class="right">
             <?php
-            echo "<li class=\"right\"><a href=\"#\"><img src=\"{$_SESSION['Avatar']}\" alt=\"\" height=\"42\" width=\"42\"></a></li>";
+            echo "<li class=\"right\"><a href=\"#\"><img style=\"height:42px; width:42px;\"src=\"{$_SESSION['Avatar']}\"></a></li>";
             ?>
             <li class="right"><a href="signout.php">Sign Out</a></li>
           </ul>
@@ -128,17 +128,7 @@
           <hr/>
           <div class="row">
             <div class="large-5 columns">
-              <p>© Copyright no one at all. Go to town.</p>
-            </div>
-            <div class="large-7 columns">
-              <ul class="inline-list right">
-                <li><a href="#">Section 1</a></li>
-                <li><a href="#">Section 2</a></li>
-                <li><a href="#">Section 3</a></li>
-                <li><a href="#">Section 4</a></li>
-                <li><a href="#">Section 5</a></li>
-                <li><a href="#">Section 6</a></li>
-              </ul>
+              <p>Copyright no one at all.</p>
             </div>
           </div>
         </div>
