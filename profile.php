@@ -148,9 +148,6 @@
                   <li><strong><a href="<?= $row['HTML_URL']?>">Comments on GitHub</a></strong></li>
                   <li><strong>Issue State: <?php echo $row['State'];?></strong></li>
                 </ul>
-                <p>
-                  <?= labels($row); ?>
-                </p>
                 <a href="<?= $row['User_HTML']?>">
                   &#64;<?= $row['User']?>
                 </a>
@@ -165,7 +162,7 @@
                 <div id="issue-detail-modal-<?= $row['IID']?>" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
 
               <img class="th avatar-thumbnail" src="<?= $row['Avatar_URL'] ?>"> says: <h4 id="modalTitle"><?= $row['Title']?></h4>
-                 <p class="lead subheader">Issue &#35;<?= $row['Id']?> | <a href="<?= $row['User_HTML']?>">&#64;<?= $row['User'] ?></a><%= getLabels(labels) %></p>
+                 <p class="lead subheader">Issue &#35;<?= $row['Id']?> | <a href="<?= $row['User_HTML']?>">&#64;<?= $row['User'] ?></a></p>
                  <p class="full-detail"><?= $body ?></p>
                  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
               </div>

@@ -117,12 +117,6 @@
                  <input type="hidden" name="User_HTML" value="<%= user.html_url %>">
                  <input type="hidden" name="URL" value="<%= url %>">
                  <input type="hidden" name="Labels_URL" value="<%= labels_url %>">
-                 <input type="hidden" name="Label1_Name" value="<%= labels[0].name %>">
-                 <input type="hidden" name="Label1_Color" value="<%= labels[0].color %>">
-                 <input type="hidden" name="Label2_Name" value="<%= labels[1].name %>">
-                 <input type="hidden" name="Label2_Color" value="<%= labels[1].color %>">
-                 <input type="hidden" name="Label3_Name" value="<%= labels[2].name %>">
-                 <input type="hidden" name="Label3_Color" value="<%= labels[2].color %>">
                  <input type="hidden" name="Comments_URL" value="<%= comments_url %>">
                  <input type="hidden" name="HTML_URL" value="<%= html_url %>">
                  <input type="hidden" name="Id" value="<%= number %>">
@@ -147,16 +141,6 @@
           <div class="row">
             <div class="large-5 columns">
               <p>© Copyright no one at all. Go to town.</p>
-            </div>
-            <div class="large-7 columns">
-              <ul class="inline-list right">
-                <li><a href="#">Section 1</a></li>
-                <li><a href="#">Section 2</a></li>
-                <li><a href="#">Section 3</a></li>
-                <li><a href="#">Section 4</a></li>
-                <li><a href="#">Section 5</a></li>
-                <li><a href="#">Section 6</a></li>
-              </ul>
             </div>
           </div>
         </div>

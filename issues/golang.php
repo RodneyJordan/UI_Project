@@ -115,8 +115,6 @@
                  <input type="hidden" name="User_HTML" value="<%= user.html_url %>">
                  <input type="hidden" name="URL" value="<%= url %>">
                  <input type="hidden" name="Labels_URL" value="<%= labels_url %>">
-                 <input type="hidden" name="Label1_Name" value="<%= labels[0].name %>">
-                 <input type="hidden" name="Label1_Color" value="<%= labels[0].color %>">
                  <input type="hidden" name="Comments_URL" value="<%= comments_url %>">
                  <input type="hidden" name="HTML_URL" value="<%= html_url %>">
                  <input type="hidden" name="Id" value="<%= number %>">
