@@ -35,7 +35,7 @@
           <!-- Right Nav Section -->
           <ul class="right">
             <?php
-            echo "<li class=\"right\"><a href=\"#\"><img src=\"{$_SESSION['Avatar']}\" alt=\"\" height=\"42\" width=\"42\"></a></li>";
+            echo "<li class=\"right\"><a href=\"#\"><img style=\"height:42px; width:42px;\"src=\"{$_SESSION['Avatar']}\"></a></li>";
             ?>
             <li class="right"><a href="signout.php">Sign Out</a></li>
           </ul>
