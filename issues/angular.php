@@ -29,7 +29,7 @@
           <!-- Right Nav Section -->
           <ul class="right">
             <?php
-            echo "<li class=\"right\"><a href=\"../profile.php\"><img style=\"height:42px; width:42px;\"src=\"{$_SESSION['Avatar']}\"></a></li>";
+            echo "<li class=\"right\"><a href=\"../profile.php\"><img style=\"height:42px; width:42px;\"src=\"../{$_SESSION['Avatar']}\"></a></li>";
             ?>
             <li class="right"><a href="../signout.php">Sign Out</a></li>
           </ul>
@@ -117,6 +117,12 @@
                  <input type="hidden" name="User_HTML" value="<%= user.html_url %>">
                  <input type="hidden" name="URL" value="<%= url %>">
                  <input type="hidden" name="Labels_URL" value="<%= labels_url %>">
+                 <input type="hidden" name="Label1_Name" value="<%= labels[0].name %>">
+                 <input type="hidden" name="Label1_Color" value="<%= labels[0].color %>">
+                 <input type="hidden" name="Label2_Name" value="<%= labels[1].name %>">
+                 <input type="hidden" name="Label2_Color" value="<%= labels[1].color %>">
+                 <input type="hidden" name="Label3_Name" value="<%= labels[2].name %>">
+                 <input type="hidden" name="Label3_Color" value="<%= labels[2].color %>">
                  <input type="hidden" name="Comments_URL" value="<%= comments_url %>">
                  <input type="hidden" name="HTML_URL" value="<%= html_url %>">
                  <input type="hidden" name="Id" value="<%= number %>">

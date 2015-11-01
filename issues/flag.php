@@ -12,6 +12,12 @@ if(isset($_POST['Title'])) {
   $user_html = $_POST['User_HTML'];
   $url = $_POST['URL'];
   $label_url = $_POST['Labels_URL'];
+  $label1_name = $_POST['Label1_Name'];
+  $label1_color = $_POST['Label1_Color'];
+  $label2_name = $_POST['Label2_Name'];
+  $label2_color = $_POST['Label2_Color'];
+  $label3_name = $_POST['Label3_Name'];
+  $label3_color = $_POST['Label3_Color'];
   $comments_url = $_POST['Comments_URL'];
   $html_url = $_POST['HTML_URL'];
   $id = $_POST['Id'];
@@ -24,8 +30,13 @@ if(isset($_POST['Title'])) {
   $body = str_replace("'", "[mysinglequote]", $body);
   $body = str_replace("`", "[backtick]", $body);
 
-  $query = "INSERT INTO ISSUES(UID, Title, State, User, User_HTML, URL, Labels_URL, Comments_URL, HTML_URL, Id, Body, Avatar_URL)
-    VALUES('$uid', '$title', '$state', '$user', '$user_html', '$url', '$label_url', '$comments_url', '$html_url', '$id', '$body', '$avatar_url')";
+  $query = "INSERT INTO ISSUES(UID, Title, State, User, User_HTML,
+    URL, Labels_URL, Label1_Name, Label1_Color, Label2_Name, Label2_Color,
+    Label3_Name, Label3_Color, Comments_URL, HTML_URL, Id, Body, Avatar_URL)
+    VALUES('$uid', '$title', '$state', '$user', '$user_html', '$url',
+    '$label_url', '$label1_name', '$label1_color', '$label2_name',
+    '$label2_color', '$label3_name', '$label3_color', '$comments_url',
+    '$html_url', '$id', '$body', '$avatar_url')";
   $result = mysqli_query($db_server, $query);
   if(!$result) die ("Database access failed: " .mysqli_error($db_server));
   else {

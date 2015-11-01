@@ -10,6 +10,24 @@
 
     return $body;
   }
+
+  function labels($row) {
+    $label = "&nbsp;|&nbsp;<span class=\"info label\" style=\"background-color:#";
+    $label = $label .$row['Label1_Color'];
+    $label = $label . "\">";
+    $label = $label . $row['Label1_Name'];
+    $label = $label . " </span>";
+    $label = $label . "&nbsp;|&nbsp;<span class=\"info label\" style=\"background-color:#";
+    $label = $label .$row['Label2_Color'];
+    $label = $label . "\">";
+    $label = $label . $row['Label2_Name'];
+    $label = $label . " </span>";
+    $label = $label . "&nbsp;|&nbsp;<span class=\"info label\" style=\"background-color:#";
+    $label = $label .$row['Label3_Color'];
+    $label = $label . "\">";
+    $label = $label . $row['Label3_Name'];
+    $label = $label . " </span>";
+  }
 ?>
 <!DOCTYPE html>
 <html>
@@ -130,6 +148,12 @@
                   <li><strong><a href="<?= $row['HTML_URL']?>">Comments on GitHub</a></strong></li>
                   <li><strong>Issue State: <?php echo $row['State'];?></strong></li>
                 </ul>
+                <p>
+                  <?= labels($row); ?>
+                </p>
+                <a href="<?= $row['User_HTML']?>">
+                  &#64;<?= $row['User']?>
+                </a>
                   <p><?= shortenTo140($body); ?></p>
                   <form action="remove.php" method="post">
                     <a href="#" class="button tiny" data-reveal-id="issue-detail-modal-<?= $row['IID']?>">Full Details</a>
@@ -141,7 +165,7 @@
                 <div id="issue-detail-modal-<?= $row['IID']?>" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
 
               <img class="th avatar-thumbnail" src="<?= $row['Avatar_URL'] ?>"> says: <h4 id="modalTitle"><?= $row['Title']?></h4>
-                 <p class="lead subheader">Issue &#35;<?= $row['Id']?> | <a href="<?= $row['HTML_URL']?>">&#64;<%= user.login %></a><%= getLabels(labels) %></p>
+                 <p class="lead subheader">Issue &#35;<?= $row['Id']?> | <a href="<?= $row['User_HTML']?>">&#64;<?= $row['User'] ?></a><%= getLabels(labels) %></p>
                  <p class="full-detail"><?= $body ?></p>
                  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
               </div>
