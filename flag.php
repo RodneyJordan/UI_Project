@@ -8,6 +8,8 @@ mysqli_select_db($db_server, $db_database)
 if(isset($_POST['Title'])) {
   $title = $_POST['Title'];
   $state = $_POST['State'];
+  $user = $_POST['User'];
+  $user_html = $_POST['User_HTML'];
   $url = $_POST['URL'];
   $label_url = $_POST['Labels_URL'];
   $comments_url = $_POST['Comments_URL'];
@@ -22,8 +24,8 @@ if(isset($_POST['Title'])) {
   $body = str_replace("'", "[mysinglequote]", $body);
   $body = str_replace("`", "[backtick]", $body);
 
-  $query = "INSERT INTO ISSUES(UID, Title, State, URL, Labels_URL, Comments_URL, HTML_URL, Id, Body, Avatar_URL)
-    VALUES('$uid', '$title', '$state', '$url', '$label_url', '$comments_url', '$html_url', '$id', '$body', '$avatar_url')";
+  $query = "INSERT INTO ISSUES(UID, Title, State, User, User_HTML, URL, Labels_URL, Comments_URL, HTML_URL, Id, Body, Avatar_URL)
+    VALUES('$uid', '$title', '$state', '$user', '$user_html', '$url', '$label_url', '$comments_url', '$html_url', '$id', '$body', '$avatar_url')";
   $result = mysqli_query($db_server, $query);
   if(!$result) die ("Database access failed: " .mysqli_error($db_server));
   else {

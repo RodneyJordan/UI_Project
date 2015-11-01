@@ -113,6 +113,8 @@
                <form action="flag.php" method="post">
                  <input type="hidden" name="Title" value="<%= title %>">
                  <input type="hidden" name="State" value="<%= state %>">
+                 <input type="hidden" name="User" value="<%= user.login %>">
+                 <input type="hidden" name="User_HTML" value="<%= user.html_url %>">
                  <input type="hidden" name="URL" value="<%= url %>">
                  <input type="hidden" name="Labels_URL" value="<%= labels_url %>">
                  <input type="hidden" name="Comments_URL" value="<%= comments_url %>">
