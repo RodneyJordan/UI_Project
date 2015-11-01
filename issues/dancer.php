@@ -49,7 +49,7 @@
               <img src="../img/svgs/fi-home.svg" >
               <label>Home</label>
             </a>
-            <a class="item">
+            <a class="item" href="dancer_flagged.php">
               <img src="../img/svgs/fi-flag.svg" >
               <label>Flagged</label>
             </a>
