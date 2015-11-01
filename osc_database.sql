@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS ISSUES (
    Title varchar(255),
    State varchar(5),
    User varchar(255),
-   User_HTML varchar(255)
+   User_HTML varchar(255),
    URL varchar(255),
    Labels_URL varchar(255),
    Comments_URL varchar(255),
