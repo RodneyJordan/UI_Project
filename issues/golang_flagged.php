@@ -15,7 +15,7 @@
 <html>
    <head>
      <?php
-      echo "<title>Foundation - {$_SESSION["Fname"]} {$_SESSION["Lname"]}</title>";
+      echo "<title>Go - {$_SESSION["Fname"]} {$_SESSION["Lname"]}</title>";
      ?>
       <link rel="stylesheet" href="../css2/foundation.css">
       <link rel="stylesheet" href="../css/app.css">
@@ -45,7 +45,7 @@
         <div class="large-12 columns">
           <div class="panel">
             <?php
-              echo "<h1>Foundation - {$_SESSION["Fname"]}"." ". "{$_SESSION["Lname"]}</h1>";
+              echo "<h1>Go - {$_SESSION["Fname"]}"." ". "{$_SESSION["Lname"]}</h1>";
             ?>
           </div>
         </div>
@@ -58,18 +58,18 @@
               <img src="../img/svgs/fi-home.svg" >
               <label>Home</label>
             </a>
-            <a class="item" href="foundation.php">
+            <a class="item" href="golang.php">
               <img src="../img/svgs/fi-refresh.svg" >
-              <label>All Angular</label>
+              <label>All Go</label>
             </a>
-            <a class="item" href="https://github.com/zurb/foundation">
+            <a class="item" href="https://github.com/golang/go">
               <img src="../img/svgs/fi-social-github.svg" >
               <label>Git Repo</label>
             </a>
 
-            <a class="item" href="http://foundation.zurb.com">
+            <a class="item" href="https://golang.org">
               <img src="../img/svgs/fi-link.svg" >
-              <label>Foundation Homepage</label>
+              <label>Go Homepage</label>
             </a>
           </div>
         </div>
@@ -103,7 +103,7 @@
           $result = mysqli_query($db_server, $query);
           if($result) {
             while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
-              if($row['Origin'] == "foundation.php") {
+              if($row['Origin'] == "golang.php") {
                 $body = str_replace("[mysinglequote]", "'", $row['Body']);
                 $body = str_replace("[backtick]", "`", $body);
                 ?>
