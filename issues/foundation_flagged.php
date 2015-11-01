@@ -60,7 +60,7 @@
             </a>
             <a class="item" href="foundation.php">
               <img src="../img/svgs/fi-refresh.svg" >
-              <label>All Angular</label>
+              <label>All Foundation</label>
             </a>
             <a class="item" href="https://github.com/zurb/foundation">
               <img src="../img/svgs/fi-social-github.svg" >

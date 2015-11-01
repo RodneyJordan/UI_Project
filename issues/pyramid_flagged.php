@@ -15,7 +15,7 @@
 <html>
    <head>
      <?php
-      echo "<title>Grails - {$_SESSION["Fname"]} {$_SESSION["Lname"]}</title>";
+      echo "<title>Pyramid - {$_SESSION["Fname"]} {$_SESSION["Lname"]}</title>";
      ?>
       <link rel="stylesheet" href="../css2/foundation.css">
       <link rel="stylesheet" href="../css/app.css">
@@ -45,7 +45,7 @@
         <div class="large-12 columns">
           <div class="panel">
             <?php
-              echo "<h1>Grails - {$_SESSION["Fname"]}"." ". "{$_SESSION["Lname"]}</h1>";
+              echo "<h1>Pyramid - {$_SESSION["Fname"]}"." ". "{$_SESSION["Lname"]}</h1>";
             ?>
           </div>
         </div>
@@ -58,18 +58,18 @@
               <img src="../img/svgs/fi-home.svg" >
               <label>Home</label>
             </a>
-            <a class="item" href="grails.php">
+            <a class="item" href="pyramid.php">
               <img src="../img/svgs/fi-refresh.svg" >
-              <label>All Grails</label>
+              <label>All Pyramid</label>
             </a>
-            <a class="item" href="https://github.com/grails/grails-core">
+            <a class="item" href="https://github.com/Pylons/pyramid">
               <img src="../img/svgs/fi-social-github.svg" >
               <label>Git Repo</label>
             </a>
 
-            <a class="item" href="https://grails.org">
+            <a class="item" href="http://www.pylonsproject.org">
               <img src="../img/svgs/fi-link.svg" >
-              <label>Grails Homepage</label>
+              <label>Pyramid Homepage</label>
             </a>
           </div>
         </div>
@@ -103,7 +103,7 @@
           $result = mysqli_query($db_server, $query);
           if($result) {
             while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
-              if($row['Origin'] == "grails.php") {
+              if($row['Origin'] == "pyramid.php") {
                 $body = str_replace("[mysinglequote]", "'", $row['Body']);
                 $body = str_replace("[backtick]", "`", $body);
                 ?>
