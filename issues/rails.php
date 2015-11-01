@@ -49,7 +49,7 @@
               <img src="../img/svgs/fi-home.svg" >
               <label>Home</label>
             </a>
-            <a class="item">
+            <a class="item" href="rails_flagged.php">
               <img src="../img/svgs/fi-flag.svg" >
               <label>Flagged</label>
             </a>
@@ -57,7 +57,7 @@
               <img src="../img/svgs/fi-social-github.svg" >
               <label>Git Repo</label>
             </a>
-            <a class="item">
+            <a class="item" href="http://rubyonrails.org/">
               <img src="../img/svgs/fi-link.svg" >
               <label>Rails Homepage</label>
             </a>
