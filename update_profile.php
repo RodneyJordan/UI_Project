@@ -105,7 +105,10 @@
                </label>
              </fieldset>
            </form>
+
            <form action="upload.php" method="post" enctype="multipart/form-data">
+             <fieldset>
+               <legend>Upload an Avatar</legend>
              <div class="row">
                <div class="large-12 columns">
                  <div class="row collapse">
@@ -113,11 +116,12 @@
                      <input type="file" name="fileToUpload" id="fileToUpload">
                    </div>
                    <div class="small-2 columns">
-                     <input class="button postfix" type="submit" value="Upload Image" name="submit">
+                     <input class="button postfix" type="submit" value="Upload" name="submit">
                    </div>
                  </div>
                </div>
              </div>
+             </fieldset>
            </form>
         </div>
 
