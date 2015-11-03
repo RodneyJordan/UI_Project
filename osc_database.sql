@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS USER (
    Minit char(1),
    Lname varchar(15),
    UserName varchar(50) NOT NULL UNIQUE,
-   Password varchar(15) NOT NULL UNIQUE,
+   Password varchar(15) NOT NULL,
    Avatar  varchar(50),
    PRIMARY KEY (UID)
 ) ENGINE = MyISAM;
